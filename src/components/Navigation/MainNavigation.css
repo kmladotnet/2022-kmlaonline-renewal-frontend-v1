@@ -1,0 +1,52 @@
+@font-face{
+	font-family: "ridibatang";
+	src: url("../../assets/fonts/RIDIBatang.otf");
+}
+
+li {
+	list-style: none;
+}
+
+.nav-links{
+	font-family: 'ridibatang', sans-serif;
+	width: 400px;
+	height: 50px;
+	font-style: normal;
+	font-weight: normal;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	justify-content: space-between;
+	background-color: transparent;
+	color: #000;
+	margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+	padding: 0;
+}
+
+.flip li{
+  display: block;
+  height: 100%;
+  font-size: 20px;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  padding: auto;
+  width: auto;
+}
+
+.nav-links div {
+	color: #000;
+	font-size: 24px;
+	color: #fff; 
+}
+
+.flip {
+	display: flex;
+	gap: 20px;
+	font-size: 15px;
+}

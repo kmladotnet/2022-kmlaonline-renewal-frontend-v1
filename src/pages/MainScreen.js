@@ -1,6 +1,9 @@
 import React from 'react';
 
 import Icons from '../components/Icon/Icons'
+import MainNavigation from '../components/Navigation/MainNavigation';
+import SubNavigation from '../components/Navigation/SubNavigation';
+import HorizontalBar from '../components/UIMaterials/HorizontalBar';
 import Title from '../components/UIMaterials/Title';
 
 function Main() {
@@ -9,6 +12,9 @@ function Main() {
       <React.Fragment>
         <Icons/>
         <Title/>
+        <MainNavigation />
+        <HorizontalBar />
+        <SubNavigation />
       </React.Fragment>
     </div>
   );

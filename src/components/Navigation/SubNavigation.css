@@ -1,0 +1,34 @@
+@font-face{
+	font-family: "ridibatang";
+	src: url("../../assets/fonts/RIDIBatang.otf");
+}
+
+.buttons {
+  display: flex;
+  padding: 40px;
+  width: 100%;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  justify-content: center;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.buttons > div > label {
+  font-family: "ridibatang", sans-serif;
+  padding: 20px 40px 20px 40px;
+  font-size: 20px;
+  text-decoration: none;
+  color: #fff;
+  border: 2.5px solid #fff;
+  box-sizing: border-box;
+  text-align: left;
+  margin: 20px;
+}
+
+.buttons > div > label:hover {
+  color: #0c3c60;
+  padding: 20px 40px 20px 40px;
+  background-color: #fff;
+}

@@ -1,6 +1,7 @@
 .title {
     margin-top: 100px;
 	margin-left: auto;
+    margin-bottom: 35px;
 	width: auto;
 	height: auto;
 	text-align: center;
@@ -8,7 +9,7 @@
 	font-family: Abhaya Libre ExtraBold;
 	font-style: normal;
 	font-weight: 800;
-	font-size: 96px;
+	font-size: 5vw;
 	line-height: 77px;
 	color: #FFFFFF;
 }
