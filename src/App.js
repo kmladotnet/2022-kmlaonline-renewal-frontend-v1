@@ -1,11 +1,11 @@
 import React from 'react';
 
-import Icons from './components/Icon/Icons'
+import Main from './pages/Main';
 
 function App() {
   return (
     <div className="App">
-      <Icons />
+      <Main />
     </div>
   );
 }
