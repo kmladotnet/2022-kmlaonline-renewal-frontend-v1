@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 
 import MainScreen from './pages/MainScreen';
-import Profile from './pages/Profile';
+import UserPage from './components/UserProfile/UserPage'
 
 function App() {
   return (
@@ -15,9 +15,9 @@ function App() {
       <main>
         <Switch>
           <Route path="/user/id" exact>
-            <Profile />
+            <UserPage />
           </Route>
-          <Route path="" exact>
+          <Route path="/" exact>
             <MainScreen />
           </Route>
           <Redirect to="" />

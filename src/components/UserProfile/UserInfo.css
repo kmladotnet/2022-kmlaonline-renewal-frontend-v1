@@ -1,0 +1,86 @@
+@font-face {
+  font-family: "ridibatang";
+  src: url("../../assets/fonts/RIDIBatang.otf");
+}
+
+* {
+  box-sizing: border-box;
+  border-radius: 5px;
+  font-family: "ridibatang", sans-serif;
+}
+/*
+.title {
+  margin-top: 150px;
+  font-family: "Abhaya Libre", serif;
+  text-align: center;
+  color: #fff;
+  font-size: 50px;
+}
+
+body {
+  margin: 0;
+  background: #0c3c60 url("") no-repeat;
+  background-size: cover;
+  font-family: "Noto Sans KR", sans-serif;
+}
+*/
+.profile-form {
+  width: 80%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.88);
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 50px;
+  padding: 20px;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+}
+
+.profile-picture {
+  width: 10%;
+  height: 10%;
+  display: inline-block;
+  align-items: left;
+}
+
+.infotable {
+  margin-top: 5%;
+  font-size: 1.5em;
+  display: inline-block;
+  border: none;
+}
+
+.infotype {
+  color: #000;
+  padding: 20px 20px;
+}
+
+.infoelement {
+  color: #0c3c60;
+}
+
+.name {
+  float: left;
+  font-size: 2.5em;
+  text-align: center;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 4%;
+}
+
+.comment {
+  color: gray;
+  font-size: 0.7em;
+}
+
+.top-elements div {
+  float: left;
+  clear: none;
+}
+
+.info {
+  margin-top: 5%;
+}
