@@ -8,7 +8,7 @@ const UserInfo = () => {
   return (
     <div class="profile-form">
       <div class="top-elements">
-        <img src={profile} class="profile-picture"></img>
+        <img src={profile} class="profile-picture" alt ="profile pic"></img>
         <div class="name">
           <label class="korean-name">김솔</label>
           <label class="english-name">Keam Sol</label><br></br>

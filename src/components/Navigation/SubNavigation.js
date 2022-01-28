@@ -9,7 +9,7 @@ const SubNavigation = () => {
         <label className = "sub-buttons">공강 신청</label>
       </div>
       <div class="penaltypoints">
-        <label className = "sub-buttons">학생회 상벌점 확인</label>
+        <a href = "https://docs.google.com/spreadsheets/d/165mM75gJkalE1geuobB60YWLSvPzzIe-ssecshSnwKk/edit#gid=277040472" target = "_blank"className = "sub-buttons">학생회 상벌점 확인</a>
       </div>
     </div>
   );

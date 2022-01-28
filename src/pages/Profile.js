@@ -1,4 +1,5 @@
 import React from "react";
+
 import UserPage from "../components/UserProfile/UserPage";
 
 const Profile = () => {
@@ -14,6 +15,6 @@ const Profile = () => {
         }
     ];
     return <UserPage item = {USER}/>;    
-}
+};
 
-export default Profile
+export default Profile;
