@@ -26,7 +26,7 @@
   margin: 20px;
 }
 
-.buttons > div > label:hover {
+.sub-buttons:hover {
   color: #0c3c60;
   padding: 20px 40px 20px 40px;
   background-color: #fff;

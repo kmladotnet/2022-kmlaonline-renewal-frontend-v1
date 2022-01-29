@@ -5,22 +5,19 @@ import {
   Redirect,
   Switch,
 } from "react-router-dom";
+import PageNotFound from './pages/ErrorPage';
 
 import MainScreen from './pages/MainScreen';
-import UserPage from './components/UserProfile/UserPage'
+import UserPage from './pages/UserPage'
 
 function App() {
   return (
     <Router>
       <main>
         <Switch>
-          <Route path="/user/id" exact>
-            <UserPage />
-          </Route>
-          <Route path="/" exact>
-            <MainScreen />
-          </Route>
-          <Redirect to="" />
+          <Route exact path="/user/id" component = {UserPage} />
+          <Route exact path="/" component = {MainScreen} />
+          <Route component = {PageNotFound} />
         </Switch>
       </main>
     </Router>

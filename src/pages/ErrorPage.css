@@ -1,0 +1,46 @@
+@font-face {
+  font-family: "ridibatang";
+  src: url("../assets/fonts/RIDIBatang.otf");
+}
+
+* {
+  box-sizing: border-box;
+  border-radius: 5px;
+  font-family: "ridibatang", sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #0c3c60 url("../assets/images/kmlaonlinebackground.png") no-repeat;
+  background-size: cover;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.profile-form {
+  width: 80%;
+  height: 50%;
+  background-color: rgba(255, 255, 255, 0.88);
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 200px;
+  padding: 20px;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+}
+
+.error {
+  font-size: 96px;
+  color: #0c3c60;
+  font-family: Abhaya Libre ExtraBold;
+  text-align: center;
+  padding: 100px;
+}
+
+.error-message {
+  font-size: 48px;
+}
+
+.message {
+  margin: 100px;
+}
