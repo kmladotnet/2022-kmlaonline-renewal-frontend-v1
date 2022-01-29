@@ -1,0 +1,10 @@
+.links {
+  font-family: "Noto Sans KR", sans-serif;
+  text-align: center;
+}
+
+.links a {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 12px;
+  color: #9b9b9b;
+}

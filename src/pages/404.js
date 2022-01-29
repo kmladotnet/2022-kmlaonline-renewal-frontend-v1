@@ -1,4 +1,4 @@
-/* Temp. Not used
+/* Temp. Not used, Needs to be binded with 
 
 import React from "react";
 

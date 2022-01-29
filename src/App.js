@@ -8,7 +8,8 @@ import {
 import PageNotFound from './pages/ErrorPage';
 
 import MainScreen from './pages/MainScreen';
-import UserPage from './pages/UserPage'
+import UserPage from './pages/UserPage';
+import Login from './pages/Login';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <main>
         <Switch>
           <Route exact path="/user/id" component = {UserPage} />
+          <Route exact path="/login" component = {Login} />
           <Route exact path="/" component = {MainScreen} />
           <Route component = {PageNotFound} />
         </Switch>
