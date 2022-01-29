@@ -11,4 +11,4 @@
   * Graph QL API
   * REST API
 
-## Development time: 6h 50m (Ongoing)
+## Development time: 9h 00m (Ongoing)
