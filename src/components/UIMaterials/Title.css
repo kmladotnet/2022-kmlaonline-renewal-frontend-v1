@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@600&display=swap');
+
 .title {
     margin-top: 100px;
 	margin-left: auto;
@@ -6,10 +8,10 @@
 	height: auto;
 	text-align: center;
 	top: 368px;
-	font-family: Abhaya Libre ExtraBold;
+	font-family: 'Abhaya Libre', serif;
 	font-style: normal;
 	font-weight: 800;
-	font-size: 5vw;
+	font-size: 6vw;
 	line-height: 77px;
 	color: #FFFFFF;
 }
