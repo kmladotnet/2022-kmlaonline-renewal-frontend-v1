@@ -6,7 +6,7 @@
   * React DnD
   * Emotion.js
   * React Bootstrap
-+ Backend: Node.js, MongoDB
++ Backend: Node.js, MongoDB (MariaDB로 교체 예정, TCP 3302)
   * Express.js
   * Graph QL API
   * REST API
