@@ -17,7 +17,7 @@ function App() {
       <main>
         <Switch>
           <Route exact path="/user/id" component = {UserPage} />
-          <Route exact path="/login" component = {Login} />
+          <Route exact path="/login" component = {Login} /> {/* Only For test purpose, Need to be nodified; binded with Auth method*/}
           <Route exact path="/" component = {MainScreen} />
           <Route component = {PageNotFound} />
         </Switch>
