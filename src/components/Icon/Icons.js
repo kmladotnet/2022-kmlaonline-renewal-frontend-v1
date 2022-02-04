@@ -1,16 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 
 import Profile from "./Profile";
 import Notification from "./Notification";
 import Search from "./Search";
-import './Icons.css'
+import Searchbox from "./Searchbox";
+import "./Icons.css";
 
 const Icons = () => {
+  let searchboxIsOpen = false;
+
   return (
     <React.Fragment>
       <div className="flexbox-container">
         <Profile className="profile" />
-        <Search className="search" />
+        <Searchbox className="search" />
         <Notification className="noti" />
       </div>
     </React.Fragment>
@@ -18,4 +21,3 @@ const Icons = () => {
 };
 
 export default Icons;
-
