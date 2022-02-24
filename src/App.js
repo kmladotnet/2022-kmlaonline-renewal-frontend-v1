@@ -10,6 +10,7 @@ import PageNotFound from './pages/ErrorPage';
 import MainScreen from './pages/MainScreen';
 import UserPage from './pages/UserPage';
 import Login from './pages/Login';
+import LectureRoom from './pages/LectureRoom';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route exact path="/user/id" component = {UserPage} />
           <Route exact path="/login" component = {Login} /> {/* Only For test purpose, Need to be nodified; binded with Auth method*/}
           <Route exact path="/" component = {MainScreen} />
+          <Route exact path="/lectureroom" component = {LectureRoom} />
           <Route component = {PageNotFound} />
         </Switch>
       </main>

@@ -9,29 +9,29 @@ const UserInfo = (props) => {
       <div class="top-elements">
         <img src={profile} class="profile-picture" alt="profile pic"></img>
         <div class="name">
-          <label class="korean-name">김솔</label>
-          <label class="english-name">Keam Sol</label>
+          <label class="korean-name">{props.userList[0].name_kr} &nbsp;</label>
+          <label class="english-name">{props.userList[0].name_en}</label>
           <br></br>
-          <label class="comment">안녕하세요! 국내 정시입니다!</label>
+          <label class="comment">{props.userList[0].intro}</label>
         </div>
       </div>
       <div class="info">
         <table border="0" class="infotable">
           <tr>
             <td class="infotype">학번</td>
-            <td class="infoelement">{props.name}</td>
+            <td class="infoelement">{props.userList[0].schoolid}</td>
           </tr>
           <tr>
             <td class="infotype">생일</td>
-            <td class="infoelement">2006-09-23</td>
+            <td class="infoelement">{props.userList[0].birthday}</td>
           </tr>
           <tr>
             <td class="infotype">이메일</td>
-            <td class="infoelement">solkeam@gmail.com</td>
+            <td class="infoelement">{props.userList[0].email}</td>
           </tr>
           <tr>
             <td class="infotype">전화번호</td>
-            <td class="infoelement">010-0000-0000</td>
+            <td class="infoelement">{props.userList[0].phone}</td>
           </tr>
           <tr>
             <td class="infotype">글 수</td>

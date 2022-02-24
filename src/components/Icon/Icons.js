@@ -13,7 +13,7 @@ const Icons = () => {
     <React.Fragment>
       <div className="flexbox-container">
         <Profile className="profile" />
-        <Searchbox className="search" />
+        <Search className="search" />
         <Notification className="noti" />
       </div>
     </React.Fragment>
