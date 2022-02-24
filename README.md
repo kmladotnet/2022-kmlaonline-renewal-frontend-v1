@@ -10,5 +10,3 @@
   * Express.js
   * Graph QL API
   * REST API
-
-## Development time: 9h 00m (Ongoing)
