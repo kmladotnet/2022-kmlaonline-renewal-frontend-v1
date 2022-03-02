@@ -21,6 +21,12 @@ function App() {
           <Route exact path="/login" component = {Login} /> {/* Only For test purpose, Need to be nodified; binded with Auth method*/}
           <Route exact path="/" component = {MainScreen} />
           <Route exact path="/lectureroom" component = {LectureRoom} />
+          <Route exact path="/announcements" component = {LectureRoom} />
+          <Route exact path="/forum" component = {LectureRoom} />
+          <Route exact path="/counsil" component = {LectureRoom} />
+          <Route exact path="/legislative" component = {LectureRoom} />
+          <Route exact path="/judicial" component = {LectureRoom} />
+          <Route exact path="/executive" component = {LectureRoom} />
           <Route component = {PageNotFound} />
         </Switch>
       </main>
