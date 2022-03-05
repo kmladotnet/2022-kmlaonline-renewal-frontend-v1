@@ -5,6 +5,7 @@ import "./MainNavigation.css";
 
 const MainNavigation = () => {
   return (
+    <body link = "white" alink = "white" vlink = "white">
     <nav class="navbar">
       <ul class="nav-links">
         <div class="flip">
@@ -41,6 +42,7 @@ const MainNavigation = () => {
         </div>
       </ul>
     </nav>
+    </body>
   );
 };
 

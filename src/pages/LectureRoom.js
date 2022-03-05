@@ -6,7 +6,6 @@ import UserInfo from '../components/UserProfile/UserInfo';
 const LectureRoom = () => {
     <React.Fragment>
         <UserPageNav />
-        <UserInfo />
     </React.Fragment>
 }
 
