@@ -41,6 +41,7 @@ function getMonday(d) {
 }
 
 const LectureRoomSelector = () => {
+
   Date.prototype.addDays = function (days) { // Method to add days to the dae
     var date = new Date(this.valueOf());
     date.setDate(date.getDate() + days);
@@ -48,11 +49,18 @@ const LectureRoomSelector = () => {
   };
 
   var date = new Date();
+  date = getMonday(date);
+  var daysOfWeek = [];
+  
+  for (let i = 0; i<7; i++) {
+    daysOfWeek.push(date.addDays(i));
+  }
+  const [pickedDate, setPickedDate] = useState(daysOfWeek[0]);
 
-  var daysOfWeek = []
-
-  console.log(date.addDays(1));
-  date.get
+  const handleChange = (event) => {
+    setPickedDate(event.target.value);
+    console.log(pickedDate);
+  };
 
   return (
     <>
@@ -65,39 +73,42 @@ const LectureRoomSelector = () => {
               id="demo-customized-select"
               input={<BootstrapInput />}
               label="Date"
+              value={pickedDate.getFullYear()-("0" + (pickedDate.getMonth() + 1)).slice(-2)-
+                ("0" + pickedDate.getDate()).slice(-2)}
+              onChange = {handleChange}
             >
-              <MenuItem value={"monday"}>
-                {date.getFullYear()}-{("0" + (date.getMonth() + 1)).slice(-2)}-
-                {("0" + date.getDate()).slice(-2)}
+              <MenuItem value={daysOfWeek[0]}>
+                {daysOfWeek[0].getFullYear()}-{("0" + (daysOfWeek[0].getMonth() + 1)).slice(-2)}-
+                {("0" + daysOfWeek[0].getDate()).slice(-2)}
               </MenuItem>
-              <MenuItem value={"tuesday"}>
-                {date.getFullYear()}-{("0" + (date.getMonth() + 1)).slice(-2)}-
-                {("0" + (date.getDate() + 1)).slice(-2)}
+              <MenuItem value={daysOfWeek[1]}>
+                {daysOfWeek[1].getFullYear()}-{("0" + (daysOfWeek[1].getMonth() + 1)).slice(-2)}-
+                {("0" + daysOfWeek[1].getDate()).slice(-2)}
               </MenuItem>
-              <MenuItem value={"wednesday"}>
-                {date.getFullYear()}-{("0" + (date.getMonth() + 1)).slice(-2)}-
-                {("0" + (date.getDate() + 2)).slice(-2)}
+              <MenuItem value={daysOfWeek[2]}>
+                {daysOfWeek[2].getFullYear()}-{("0" + (daysOfWeek[2].getMonth() + 1)).slice(-2)}-
+                {("0" + daysOfWeek[2].getDate()).slice(-2)}
               </MenuItem>
-              <MenuItem value={"thursday"}>
-                {date.getFullYear()}-{("0" + (date.getMonth() + 1)).slice(-2)}-
-                {("0" + (date.getDate() + 3)).slice(-2)}
+              <MenuItem value={daysOfWeek[3]}>
+                {daysOfWeek[3].getFullYear()}-{("0" + (daysOfWeek[3].getMonth() + 1)).slice(-2)}-
+                {("0" + daysOfWeek[3].getDate()).slice(-2)}
               </MenuItem>
-              <MenuItem value={"friday"}>
-                {date.getFullYear()}-{("0" + (date.getMonth() + 1)).slice(-2)}-
-                {("0" + (date.getDate() + 4)).slice(-2)}
+              <MenuItem value={daysOfWeek[4]}>
+                {daysOfWeek[4].getFullYear()}-{("0" + (daysOfWeek[4].getMonth() + 1)).slice(-2)}-
+                {("0" + daysOfWeek[4].getDay()).slice(-2)}
               </MenuItem>
-              <MenuItem value={"saturday"}>
-                {date.getFullYear()}-{("0" + (date.getMonth() + 1)).slice(-2)}-
-                {("0" + (date.getDate() + 5)).slice(-2)}
+              <MenuItem value={daysOfWeek[5]}>
+                {daysOfWeek[5].getFullYear()}-{("0" + (daysOfWeek[5].getMonth() + 1)).slice(-2)}-
+                {("0" + daysOfWeek[5].getDate()).slice(-2)}
               </MenuItem>
-              <MenuItem value={"sunday"}>
-                {date.getFullYear()}-{("0" + (date.getMonth() + 1)).slice(-2)}-
-                {("0" + (date.getDate() + 6)).slice(-2)}
+              <MenuItem value={daysOfWeek[6]}>
+                {daysOfWeek[6].getFullYear()}-{("0" + (daysOfWeek[6].getMonth() + 1)).slice(-2)}-
+                {("0" + daysOfWeek[6].getDate()).slice(-2)}
               </MenuItem>
             </Select>
           </FormControl>
         </div>
-        <LectureRoomTable day={1} />
+        <LectureRoomTable day={pickedDate} />
       </div>
     </>
   );

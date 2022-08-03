@@ -3,7 +3,7 @@ import React from 'react';
 import './LectureRoomTable.css';
 
 const LectureRoomTable = (props) => {
-    console.log(props.day); 
+    console.log(props.day)
     return (
         <div class="info">
         <table class="roomtable">
@@ -19,7 +19,8 @@ const LectureRoomTable = (props) => {
           <tbody>
             <tr>
               <td class="date" rowSpan="8">
-                2022-03-03
+              {props.day.getFullYear()}-{("0" + (props.day.getMonth() + 1)).slice(-2)}-
+                {("0" + props.day.getDate()).slice(-2)}
               </td>
               <td class="period" rowSpan="4">
                 1자습 (19:00 ~ 21:00)
