@@ -1,9 +1,12 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
 
 import UserPageNav from '../components/Navigation/UserPageNav'
 import UserInfo from '../components/UserProfile/UserInfo';
 
 const UserPage = () => {
+    const { id } = useParams();
+    console.log(id)
     const USER = [
         {
             id: '1',

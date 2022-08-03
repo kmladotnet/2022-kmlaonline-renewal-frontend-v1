@@ -1,13 +1,15 @@
-import React from 'react';
+import React from "react";
 
-import UserPageNav from '../components/Navigation/UserPageNav';
-import LectureRoomTable from '../components/UIMaterials/LectureRoomTable';
+import UserPageNav from "../components/Navigation/UserPageNav";
+import LectureRoomSelector from "../components/UIMaterials/LectureRoomSelector";
 
 const LectureRoom = () => {
+  return (
     <React.Fragment>
-        <UserPageNav />
-        <LectureRoomTable />
+      <UserPageNav />
+      <LectureRoomSelector />
     </React.Fragment>
-}
+  );
+};
 
 export default LectureRoom;
