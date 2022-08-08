@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
@@ -41,7 +41,6 @@ function getMonday(d) {
 }
 
 const LectureRoomSelector = () => {
-
   Date.prototype.addDays = function (days) { // Method to add days to the dae
     var date = new Date(this.valueOf());
     date.setDate(date.getDate() + days);
@@ -49,17 +48,28 @@ const LectureRoomSelector = () => {
   };
 
   var date = new Date();
+  var today = date.getDay();
+  if (today === 0) today = 7;
   date = getMonday(date);
   var daysOfWeek = [];
   
-  for (let i = 0; i<7; i++) {
+  for (let i = 0; i<7; i++) { // Make daysOfWeek array
     daysOfWeek.push(date.addDays(i));
   }
-  const [pickedDate, setPickedDate] = useState(daysOfWeek[0]);
+
+  const returnFormattedDate = (dateParam) => {
+    return dateParam.getFullYear().toString() + "-" + ("0" + (dateParam.getMonth()+1).toString()).slice(-2) + "-" + ("0" + (dateParam.getDate()).toString()).slice(-2);
+  }
+
+  const [pickedDate, setPickedDate] = useState(daysOfWeek[today-1]);
+  const [displayDate, setDisplayDate] = useState(returnFormattedDate(daysOfWeek[0]));
+  console.log(displayDate)
+  console.log(pickedDate);
 
   const handleChange = (event) => {
     setPickedDate(event.target.value);
-    console.log(pickedDate);
+    setDisplayDate(returnFormattedDate(pickedDate))
+    console.log(displayDate);
   };
 
   return (
@@ -73,37 +83,29 @@ const LectureRoomSelector = () => {
               id="demo-customized-select"
               input={<BootstrapInput />}
               label="Date"
-              value={pickedDate.getFullYear()-("0" + (pickedDate.getMonth() + 1)).slice(-2)-
-                ("0" + pickedDate.getDate()).slice(-2)}
+              value={pickedDate}
               onChange = {handleChange}
             >
               <MenuItem value={daysOfWeek[0]}>
-                {daysOfWeek[0].getFullYear()}-{("0" + (daysOfWeek[0].getMonth() + 1)).slice(-2)}-
-                {("0" + daysOfWeek[0].getDate()).slice(-2)}
+                {returnFormattedDate(daysOfWeek[0])}
               </MenuItem>
               <MenuItem value={daysOfWeek[1]}>
-                {daysOfWeek[1].getFullYear()}-{("0" + (daysOfWeek[1].getMonth() + 1)).slice(-2)}-
-                {("0" + daysOfWeek[1].getDate()).slice(-2)}
+                {returnFormattedDate(daysOfWeek[1])}
               </MenuItem>
               <MenuItem value={daysOfWeek[2]}>
-                {daysOfWeek[2].getFullYear()}-{("0" + (daysOfWeek[2].getMonth() + 1)).slice(-2)}-
-                {("0" + daysOfWeek[2].getDate()).slice(-2)}
+                {returnFormattedDate(daysOfWeek[2])}
               </MenuItem>
               <MenuItem value={daysOfWeek[3]}>
-                {daysOfWeek[3].getFullYear()}-{("0" + (daysOfWeek[3].getMonth() + 1)).slice(-2)}-
-                {("0" + daysOfWeek[3].getDate()).slice(-2)}
+                {returnFormattedDate(daysOfWeek[3])}
               </MenuItem>
               <MenuItem value={daysOfWeek[4]}>
-                {daysOfWeek[4].getFullYear()}-{("0" + (daysOfWeek[4].getMonth() + 1)).slice(-2)}-
-                {("0" + daysOfWeek[4].getDay()).slice(-2)}
+                {returnFormattedDate(daysOfWeek[4])}
               </MenuItem>
               <MenuItem value={daysOfWeek[5]}>
-                {daysOfWeek[5].getFullYear()}-{("0" + (daysOfWeek[5].getMonth() + 1)).slice(-2)}-
-                {("0" + daysOfWeek[5].getDate()).slice(-2)}
+                {returnFormattedDate(daysOfWeek[5])}
               </MenuItem>
               <MenuItem value={daysOfWeek[6]}>
-                {daysOfWeek[6].getFullYear()}-{("0" + (daysOfWeek[6].getMonth() + 1)).slice(-2)}-
-                {("0" + daysOfWeek[6].getDate()).slice(-2)}
+                {returnFormattedDate(daysOfWeek[6])}
               </MenuItem>
             </Select>
           </FormControl>
