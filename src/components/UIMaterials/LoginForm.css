@@ -24,6 +24,11 @@
   border: none;
 }
 
+.remember {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 14px;
+}
+
 .text-field {
   font-family: "Noto Sans KR", sans-serif;
   font-size: 14px;

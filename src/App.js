@@ -1,9 +1,5 @@
 import React from "react";
-import {
-  BrowserRouter,
-  Routes,
-  Route
-} from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import PageNotFound from "./pages/ErrorPage";
 
@@ -13,17 +9,33 @@ import Login from "./pages/Login";
 import LectureRoom from "./pages/LectureRoom";
 
 function App() {
+  const localToken = localStorage.getItem("account");
+  const sessionToken = sessionStorage.getItem("account");
+  console.log(localToken);
+  if (!localToken && !sessionToken) {
+    console.log("To login page");
+    return (
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route element={<Login />} />
+          <Route path="*" element={<Login />} />
+        </Routes>
+      </BrowserRouter>
+    );
+  }
+
   return (
     <BrowserRouter>
-    <Routes>
-      <Route path="/" element = {<MainScreen />}/>
-      <Route path="/user/:id" element = {<UserPage />} />
-      <Route path="/login" element = {<Login />} />
-      <Route path="/lectureroom" element = {<LectureRoom />} />
-      <Route path="/forum" element = {<LectureRoom />} />
-      <Route element={PageNotFound} />
-    </Routes>
-  </BrowserRouter>
+      <Routes>
+        <Route path="/" element={<MainScreen />} />
+        <Route path="/main" element={<MainScreen />} />
+        <Route path="/user/:id" element={<UserPage />} />
+        <Route path="/lectureroom" element={<LectureRoom />} />
+        <Route path="/forum" element={<LectureRoom />} />
+        <Route element={<PageNotFound />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
