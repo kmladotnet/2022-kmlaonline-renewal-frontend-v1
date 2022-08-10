@@ -1,34 +1,35 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import { useParams } from "react-router-dom";
 
-import UserPageNav from '../components/Navigation/UserPageNav'
-import UserInfo from '../components/UserProfile/UserInfo';
+import UserPageNav from "../components/Navigation/UserPageNav";
+import UserInfo from "../components/UserProfile/UserInfo";
 
 const UserPage = () => {
-    const { id } = useParams();
-    console.log(id)
-    const USER = [
-        {
-            id: '1',
-            name_en: 'Keam Sol',
-            name_kr: '김솔',
-            image: 'https://scontent.ficn1-1.fna.fbcdn.net/v/t1.15752-9/p1080x2048/271895656_627839525165482_1508341237685053032_n.jpg?_nc_cat=109&ccb=1-5&_nc_sid=ae9488&_nc_ohc=sR4pKAeVA6kAX-am7NS&tn=WldP2aJvz5l8FTT1&_nc_ht=scontent.ficn1-1.fna&oh=03_AVJhFuanJnttP9kd6oAY1xpHva39s6uktPtB6MFP_HV2rQ&oe=621951DE',
-            birthday: '2006-09-23',
-            email: 'solkeam@gmail.com',
-            schoolid: '211023',
-            gender: 'male',
-            phone: '010-0000-0000',
-            comments: 0,
-            intro: '안녕하세요! 국내 정시입니다.',
-        }
-    ];
+  const id = useParams();
+  console.log(id.id);
+  const [user, setUser] = useState({});
 
-    return (
-        <React.Fragment>
-            <UserPageNav />
-            <UserInfo userList = {USER}/>
-        </React.Fragment>
-    );
-}
+  useEffect(() => {}, [user]);
+
+  useEffect(() => {
+    axios
+      .get(`http://localhost:8800/api/users/${id.id}`)
+      .then((response) => {
+        console.log(response.data[0]);
+        setUser(response.data[0]);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
+
+  return (
+    <React.Fragment>
+      <UserPageNav />
+      <UserInfo userList={user} />
+    </React.Fragment>
+  );
+};
 
 export default UserPage;

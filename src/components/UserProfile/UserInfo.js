@@ -5,41 +5,40 @@ import profile from "../../assets/images/profile.png";
 
 const UserInfo = (props) => {
   return (
-    <div class="profile-form">
-      <div class="top-elements">
-        <img src={profile} class="profile-picture" alt="profile pic"></img>
-        <div class="name">
-          <label class="korean-name">{props.userList[0].name_kr} &nbsp;</label>
-          <label class="english-name">{props.userList[0].name_en}</label>
+    <div className="profile-form">
+      <div className="top-elements">
+        <img src={profile} className="profile-picture" alt="profile pic"></img>
+        <div className="name">
+          <label className="korean-name">{props.userList.name} &nbsp;</label>
           <br></br>
-          <label class="comment">{props.userList[0].intro}</label>
+          <label className="comment">{props.userList.introduction}</label>
         </div>
       </div>
-      <div class="info">
-        <table border="0" class="infotable">
+      <div className="info">
+        <table border="0" className="infotable">
           <tr>
-            <td class="infotype">학번</td>
-            <td class="infoelement">{props.userList[0].schoolid}</td>
+            <td className="infotype">학번</td>
+            <td className="infoelement">{props.userList.schoolId}</td>
           </tr>
           <tr>
-            <td class="infotype">생일</td>
-            <td class="infoelement">{props.userList[0].birthday}</td>
+            <td className="infotype">생일</td>
+            <td className="infoelement">{props.userList.birthday}</td>
           </tr>
           <tr>
-            <td class="infotype">이메일</td>
-            <td class="infoelement">{props.userList[0].email}</td>
+            <td className="infotype">이메일</td>
+            <td className="infoelement">{props.userList.email}</td>
           </tr>
           <tr>
-            <td class="infotype">전화번호</td>
-            <td class="infoelement">{props.userList[0].phone}</td>
+            <td className="infotype">전화번호</td>
+            <td className="infoelement">{props.userList.contact}</td>
           </tr>
           <tr>
-            <td class="infotype">글 수</td>
-            <td class="infoelement">0개</td>
+            <td className="infotype">글 수</td>
+            <td className="infoelement">0개</td>
           </tr>
           <tr>
-            <td class="infotype">댓글 수</td>
-            <td class="infoelement">0개</td>
+            <td className="infotype">댓글 수</td>
+            <td className="infoelement">0개</td>
           </tr>
         </table>
       </div>

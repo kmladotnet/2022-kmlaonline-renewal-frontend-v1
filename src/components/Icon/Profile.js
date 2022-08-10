@@ -5,10 +5,19 @@ import profile from "../../assets/images/profile.png";
 import "./Profile.css";
 
 const Profile = () => {
+  var myId = 0;
+  if (localStorage.getItem("account") !== null) {
+    myId = JSON.parse(localStorage.getItem("account")).schoolId;
+    console.log(myId);
+  } else {
+    myId = JSON.parse(sessionStorage.getItem("account")).schoolId;
+  }
+
+  const onProfileClick = async () => {
+    window.location.href = `user/${myId}`;
+  }
   return (
-    <NavLink to="user/id" className="profile-button">
-      <img src={profile} alt="profile" className="profile" onClick=""></img>
-    </NavLink>
+      <img src={profile} alt="profile" className="profile" onClick={onProfileClick}></img>
   );
 };
 

@@ -7,18 +7,18 @@ import MainScreen from "./pages/MainScreen";
 import UserPage from "./pages/UserPage";
 import Login from "./pages/Login";
 import LectureRoom from "./pages/LectureRoom";
+import Register from "./pages/Register";
 
 function App() {
   const localToken = localStorage.getItem("account");
   const sessionToken = sessionStorage.getItem("account");
-  console.log(localToken);
   if (!localToken && !sessionToken) {
-    console.log("To login page");
     return (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Login />} />
           <Route element={<Login />} />
+          <Route path="/register" element={<Register />} />
           <Route path="*" element={<Login />} />
         </Routes>
       </BrowserRouter>
