@@ -102,7 +102,8 @@ const Register = () => {
     });
   }
 
-  const onClickRegister = async () => {
+  const onClickRegister = async (e) => {
+    e.preventDefault();
     if (password === checkPassword) {
         registerUser();
     } else {
@@ -350,7 +351,7 @@ const Register = () => {
             </div>
           </div>
         </div>
-        <input type="submit" value="회원가입" className="submit-btn" onClick={onClickRegister}></input>
+        <input type="button" value="회원가입" className="submit-btn" onClick={onClickRegister}></input>
       </form>
     </div>
   );

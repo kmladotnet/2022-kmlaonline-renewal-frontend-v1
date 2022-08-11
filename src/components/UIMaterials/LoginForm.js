@@ -114,6 +114,10 @@ const LoginForm = () => {
     }
   };
 
+  const onClickRegister = () => {
+    window.location.href = "register";
+  }
+
   return (
     <div className="login-form">
       <form onSubmit={handleSubmit}>
@@ -141,7 +145,7 @@ const LoginForm = () => {
           className="submit-btn"
           onClick={submitLogin}
         ></input>
-        <button className="register">회원가입</button>
+        <button className="register" onClick = {onClickRegister}>회원가입</button>
       </form>
       <input
         type="checkbox"
