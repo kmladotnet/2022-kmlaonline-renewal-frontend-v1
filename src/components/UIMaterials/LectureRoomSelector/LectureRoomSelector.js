@@ -6,7 +6,7 @@ import Select from "@mui/material/Select";
 import InputBase from "@mui/material/InputBase";
 import { styled } from "@mui/material/styles";
 
-import LectureRoomTable from "./LectureRoomTable";
+import LectureRoomTable from "../LectureRoomTable/LectureRoomTable";
 
 import "./LectureRoomSelector.css";
 

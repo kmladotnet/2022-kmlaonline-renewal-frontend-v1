@@ -4,6 +4,7 @@ import "./UserInfo.css";
 import profile from "../../assets/images/profile.png";
 
 const UserInfo = (props) => {
+  var birthdayDisplay = "" + props.userList.birthday;
   return (
     <div className="profile-form">
       <div className="top-elements">
@@ -22,7 +23,7 @@ const UserInfo = (props) => {
           </tr>
           <tr>
             <td className="infotype">생일</td>
-            <td className="infoelement">{props.userList.birthday}</td>
+            <td className="infoelement">{birthdayDisplay.substring(0, 10)}</td>
           </tr>
           <tr>
             <td className="infotype">이메일</td>

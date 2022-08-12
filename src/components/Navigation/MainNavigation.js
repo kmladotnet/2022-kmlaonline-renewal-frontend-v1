@@ -8,7 +8,7 @@ const MainNavigation = () => {
     <nav class="navbar">
       <ul class="nav-links">
         <div class="flip">
-          <NavLink to="announcements" className="profile-button">
+          <NavLink to="announcements/1" className="profile-button">
             <li>
               <div className="front">공지</div>
             </li>

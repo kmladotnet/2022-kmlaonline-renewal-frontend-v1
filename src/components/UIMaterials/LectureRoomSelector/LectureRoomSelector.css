@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: "ridibatang";
-  src: url("../../assets/fonts/RIDIBatang.otf");
+  src: url("../../../assets/fonts/RIDIBatang.otf");
 }
 
 * {
@@ -13,7 +13,7 @@
 
 body {
   margin: 0;
-  background: #0c3c60 url("../../assets/images/kmlaonlinebackground.png") no-repeat;
+  background: #0c3c60 url("../../../assets/images/kmlaonlinebackground.png") no-repeat;
   background-size: cover;
 }
 

@@ -1,7 +1,7 @@
 import React from "react";
 
 import "./LoginTitle.css";
-import logo from "../../assets/images/kmlaonline logo one.png";
+import logo from "../../../assets/images/kmlaonline logo one.png";
 
 const LoginTitle = () => {
   return (
