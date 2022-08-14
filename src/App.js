@@ -9,6 +9,7 @@ import Login from "./pages/Login/Login";
 import LectureRoom from "./pages/LectureRoom/LectureRoom";
 import Register from "./pages/Register/Register";
 import PostList from './pages/PostList/PostList';
+import PostWrite from "./pages/PostWrite/PostWrite";
 
 function App() {
   const localToken = localStorage.getItem("account");
@@ -35,6 +36,7 @@ function App() {
         <Route path="/lectureroom" element={<LectureRoom />} />
         <Route path="/forum" element={<LectureRoom />} />
         <Route path="/announcements/:page" element={<PostList type = "announcements" />} />
+        <Route path="/writepost/:type" element={<PostWrite />} />
         <Route element={<PageNotFound />} />
       </Routes>
     </BrowserRouter>

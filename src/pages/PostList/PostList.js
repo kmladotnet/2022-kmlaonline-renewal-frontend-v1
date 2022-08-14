@@ -1,9 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import CommonTable from "../../components/UIMaterials/Table/CommonTable";
-import CommonTableColumn from "../../components/UIMaterials/Table/CommonTableColumn";
-import CommonTableRow from "../../components/UIMaterials/Table/CommonTableRow";
 import PostListComponent from "../../components/UIMaterials/PostList/PostListComponent";
+import UserPageNav from "../../components/Navigation/UserPageNav";
 
 import "./PostList.css";
 
@@ -29,6 +27,7 @@ const PostList = (props) => {
 
   return (
     <>
+      <UserPageNav />
       <div className="postlist">
         <div className="title-button-container">
           <label className="post-title">{type}</label>
