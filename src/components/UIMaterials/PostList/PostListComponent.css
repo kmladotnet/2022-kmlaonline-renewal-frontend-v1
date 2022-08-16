@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@800&family=Poiret+One&display=swap');
+
+* {
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.title{ 
+  margin-top: 150px; 
+  font-family: 'Abhaya Libre', serif; text-align: center; 
+  color: #fff; 
+  font-size: 50px; 
+}
+
+.intro {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.postlist {
+  width: 80%;
+  background-color: rgba(255, 255, 255, 0.88);
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 50px;
+  padding: 20px;
+  text-align: center;
+  border: none;
+}
+   
+.text-field {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 14px;
+  padding: 10px;
+  border: none;
+  width: 260px;
+  margin-bottom: 10px;
+}
+
+.post-title {
+  font-size: 200%;
+  margin-right: 30%;
+}
+
+.title-button-container {
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.page-navigation {
+  margin-top: 30px;
+}
+
+.left-nav-button {
+  margin-right: 20px;
+}

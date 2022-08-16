@@ -8,3 +8,15 @@
     text-align: center;
     border: none;
 }
+
+.post-button {
+    margin-left: 10px;
+
+    margin-top: 30px;
+}
+
+.cancel-button {
+    margin-top: 30px;
+    background-color: lightgrey;
+    color: #0c3c60;
+}

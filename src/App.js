@@ -11,7 +11,7 @@ import Register from "./pages/Register/Register";
 import PostList from './pages/PostList/PostList';
 import PostWrite from "./pages/PostWrite/PostWrite";
 
-function App() {
+const App = () => {
   const localToken = localStorage.getItem("account");
   const sessionToken = sessionStorage.getItem("account");
   if (!localToken && !sessionToken) {

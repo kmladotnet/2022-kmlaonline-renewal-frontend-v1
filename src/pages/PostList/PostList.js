@@ -10,20 +10,12 @@ const onClickWritePost = () => {
 };
 
 const PostList = (props) => {
-  const { page } = useParams();
   var type = "";
-
-  const onClickPrevPage = () => {
-    window.location.href = `/${props.type}/${parseInt(page) - 1}`;
-  };
-
-  const onClickNextPage = () => {
-    window.location.href = `/${props.type}/${parseInt(page) + 1}`;
-  };
-
   if (props.type === "announcements") {
     type = "공지 게시판";
   }
+
+  console.log(type);
 
   return (
     <>
@@ -35,17 +27,7 @@ const PostList = (props) => {
             글 작성
           </button>
         </div>
-        <PostListComponent />
-        <div className="page-navigation">
-          {page > 1 && (
-            <button className="left-nav-button" onClick={onClickPrevPage}>
-              이전 페이지
-            </button>
-          )}
-          <button className="right-nav-button" onClick={onClickNextPage}>
-            다음 페이지
-          </button>
-        </div>
+        <PostListComponent type = {props.type}/>
       </div>
     </>
   );

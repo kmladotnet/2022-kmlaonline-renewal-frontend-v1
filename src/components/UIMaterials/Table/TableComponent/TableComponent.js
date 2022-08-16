@@ -10,9 +10,9 @@ const TableComponent = (props) => {
       <CommonTableRow>
         <CommonTableColumn>{props.data.num}</CommonTableColumn>
         <CommonTableColumn>{props.data.title}</CommonTableColumn>
-        <CommonTableColumn>{props.data.date}</CommonTableColumn>
-        <CommonTableColumn>{props.data.view}</CommonTableColumn>
-        <CommonTableColumn>{props.data.writer}</CommonTableColumn>
+        <CommonTableColumn>{props.data.uploadDate}</CommonTableColumn>
+        <CommonTableColumn>{props.data.views}</CommonTableColumn>
+        <CommonTableColumn>{props.data.uploader}</CommonTableColumn>
       </CommonTableRow>
     </>
   );
