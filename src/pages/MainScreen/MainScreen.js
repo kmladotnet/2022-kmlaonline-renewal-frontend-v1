@@ -11,7 +11,7 @@ function Main() {
     <div className="App">
       <React.Fragment>
         <Icons/>
-        <Title/>
+        <Title />
         <MainNavigation />
         <HorizontalBar />
         <SubNavigation />

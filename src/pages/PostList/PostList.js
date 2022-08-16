@@ -10,6 +10,7 @@ const onClickWritePost = () => {
 };
 
 const PostList = (props) => {
+  const { page } = useParams();
   var type = "";
   if (props.type === "announcements") {
     type = "공지 게시판";
@@ -22,7 +23,7 @@ const PostList = (props) => {
       <UserPageNav />
       <div className="postlist">
         <div className="title-button-container">
-          <label className="post-title">{type}</label>
+          <label className="post-title">{type} - {page} 페이지</label>
           <button onClick={onClickWritePost} className="write-post-button">
             글 작성
           </button>
